@@ -38,10 +38,11 @@ Or get the source from the application site at::
 Then follow these steps:
 
 1. Add ``'robots'`` to your INSTALLED_APPS_ setting.
-2. Make sure ``'django.template.loaders.app_directories.Loader'``
+2. Add ``'wagtail.contrib.modeladmin'`` to your INSTALLED_APPS_ setting.
+3. Make sure ``'django.template.loaders.app_directories.Loader'``
    is in your TEMPLATES setting. It's in there by default, so
    you'll only need to change this if you've changed that setting.
-3. Run the ``migrate`` management command
+4. Run the ``migrate`` management command
 
 You may want to additionally setup the `Wagtail sitemap generator`_.
 
