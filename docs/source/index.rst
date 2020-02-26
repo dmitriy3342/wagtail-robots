@@ -29,19 +29,16 @@ Installation
 
 Use your favorite Python installer to install it from PyPI::
 
-   pip install wagtail-robots
+   pip install https://github.com/dmitriy3342/wagtail-robots/archive/master.zip
 
 Or get the source from the application site at::
 
-   http://github.com/adrian-turjak/wagtail-robots/
+   https://github.com/dmitriy3342/wagtail-robots/
 
 Then follow these steps:
 
-1. Add ``'robots'`` to your INSTALLED_APPS_ setting.
-2. Make sure ``'django.template.loaders.app_directories.Loader'``
-   is in your TEMPLATES setting. It's in there by default, so
-   you'll only need to change this if you've changed that setting.
-3. Run the ``migrate`` management command
+1. Add ``'wagtail.contrib.modeladmin'`` and ``'robots'`` to your INSTALLED_APPS_ setting.
+2. Run the ``migrate`` management command
 
 You may want to additionally setup the `Wagtail sitemap generator`_.
 

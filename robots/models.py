@@ -1,5 +1,6 @@
+import django
+
 from django.db import models
-from django.utils.six import u
 from django.utils.text import get_text_list
 from django.utils.translation import ugettext_lazy as _
 
@@ -9,12 +10,18 @@ from modelcluster.fields import ParentalKey
 from robots.panels import WrappedInlinepanel
 
 from wagtail import VERSION as WAGTAIL_VERSION
+
 if WAGTAIL_VERSION >= (2, 0):
     from wagtail.core.models import Site
     from wagtail.admin.edit_handlers import FieldPanel
 else:
     from wagtail.wagtailcore.models import Site
     from wagtail.wagtailadmin.edit_handlers import FieldPanel
+
+if django.VERSION >= (3, 0):
+    from six import u
+else:
+    from django.utils.six import u
 
 
 class BaseUrl(models.Model):
@@ -129,8 +136,10 @@ class Rule(ClusterableModel):
 
     def allowed_urls(self):
         return get_text_list(list(self.allowed.all()), _('and'))
+
     allowed_urls.short_description = _('allowed')
 
     def disallowed_urls(self):
         return get_text_list(list(self.disallowed.all()), _('and'))
+
     disallowed_urls.short_description = _('disallowed')

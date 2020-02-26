@@ -1,5 +1,10 @@
-Wagtail Robots
-==============
+Wagtail3 Robots
+===============
+
+Support Django 3 and Wagtail 2.8
+
+forked from Adrian-Turjak/wagtail-robots
+https://github.com/Adrian-Turjak/wagtail-robots
 
 This is a basic Django application for Wagtail to manage robots.txt files
 following the `robots exclusion protocol`_, complementing the Django_

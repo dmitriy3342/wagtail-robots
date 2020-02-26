@@ -6,13 +6,13 @@ with open('README.rst') as file:
 
 
 setup(
-    name='wagtail-robots',
+    name='wagtail3-robots',
     long_description=long_description,
     version="0.1.2",
     description='Robots.txt exclusion for Wagtail, complementing Sitemaps.',
-    author='Adrian Turjak',
-    author_email='adriant@catalyst.net.nz',
-    url='https://github.com/adrian-turjak/wagtail-robots/',
+    author='dmitriy3342',
+    author_email='dmitriy3342@mail.ru',
+    url='https://github.com/dmitriy3342/wagtail-robots',
     packages=find_packages(),
     package_data={
         'robots': [
@@ -34,8 +34,10 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
         'Framework :: Django',
         'Framework :: Django :: 1.11',
         'Framework :: Django :: 2.0',
+        'Framework :: Django :: 3.0',
     ]
 )
